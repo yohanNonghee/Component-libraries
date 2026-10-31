@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090a">
+  <title>Yohan UI — Component Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18h1.2a2 2 0 0 0 1.5-3.3 1.7 1.7 0 0 1 1.3-2.8H18a3 3 0 0 0 3-3C21 7 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="8" r="1"/><circle cx="17" cy="11.5" r="1"/></symbol>
+    <symbol id="icon-button" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="6"/><path d="M8 12h8m-3-3 3 3-3 3"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/></symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18m-13 5h4m-4 3h7"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-warning" viewBox="0 0 24 24"><path d="M10.3 4.3 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></symbol>
+    <symbol id="icon-error" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24"><path d="m13 2-3 8h7L9 22l2-9H5l8-11Z"/></symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24"><path d="m5 11 1.5-5h11L19 11l2 2v5h-2m-14 0H3v-5l2-2Zm0 0h14m-12 4h.01M17 16h.01M7 11h10"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 8.6c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6m-11 5L20 4"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <a class="brand" href="#" aria-label="Yohan UI component library home">
+      <span class="brand-mark">Y</span>
+      <span>
+        <span class="brand-name">YOHAN UI</span>
+        <span class="brand-caption">Component Library</span>
+      </span>
+    </a>
+    <div class="header-right">
+      <span class="mode-label"><span class="mode-dot"></span>Interactive Storybook</span>
+      <a class="reference-link" href="https://yohannonghee.github.io/Yohan/" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true"><use href="#icon-external"></use></svg>
+        Live Website
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div>
+        <div class="nav-group">
+          <p class="nav-heading">Foundations</p>
+          <nav class="nav-list" aria-label="Foundations">
+            <a class="nav-link" href="#tokens" aria-current="location"><svg class="icon" aria-hidden="true"><use href="#icon-palette"></use></svg>Design Tokens</a>
+          </nav>
+        </div>
+        <div class="nav-group">
+          <p class="nav-heading">Components</p>
+          <nav class="nav-list" aria-label="Components">
+            <a class="nav-link" href="#buttons"><svg class="icon" aria-hidden="true"><use href="#icon-button"></use></svg>Buttons</a>
+            <a class="nav-link" href="#icons"><svg class="icon" aria-hidden="true"><use href="#icon-grid"></use></svg>Icons</a>
+            <a class="nav-link" href="#pictures"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg>Pictures</a>
+            <a class="nav-link" href="#cards"><svg class="icon" aria-hidden="true"><use href="#icon-card"></use></svg>Cards</a>
+            <a class="nav-link" href="#alerts"><svg class="icon" aria-hidden="true"><use href="#icon-bell"></use></svg>Alerts & Badges</a>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-note">
+          <div class="sidebar-note-title"><span>Library coverage</span><strong>5 components</strong></div>
+          <div class="readiness-bar"><span></span></div>
+          <p>Design tokens and interactive variants ready to explore.</p>
+        </div>
+        <p class="sidebar-footer">Inspired by Yohan Porsche landing page</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="page-intro">
+        <div>
+          <p class="eyebrow">Design system / Storybook</p>
+          <h1>Component Library</h1>
+          <p>A focused collection of reusable UI components, styled to match the Porsche-inspired Yohan website. Explore variants and states in the live previews below.</p>
+        </div>
+        <span class="version-tag">YOHAN UI · 1.0</span>
+      </div>
+
+      <section class="component-section" id="tokens">
+        <div class="section-heading">
+          <div><p class="eyebrow">Foundations</p><h2>Design Tokens</h2></div>
+          <span class="toolbar-label">CSS custom properties</span>
+        </div>
+        <p class="section-description">A shared palette, type scale, and spacing system keep every component consistent and easy to extend.</p>
+        <div class="token-grid">
+          <article class="token-panel">
+            <h3>Color palette</h3>
+            <div class="swatch-list">
+              <div class="swatch-item"><span class="swatch" style="background:var(--color-black)"></span><span>Black <code>--color-black · #08090a</code></span></div>
+              <div class="swatch-item"><span class="swatch" style="background:var(--color-surface)"></span><span>Surface <code>--color-surface · #151719</code></span></div>
+              <div class="swatch-item"><span class="swatch" style="background:var(--color-accent)"></span><span>Porsche Red <code>--color-accent · #d5001c</code></span></div>
+              <div class="swatch-item"><span class="swatch" style="background:var(--color-highlight)"></span><span>Sky Blue <code>--color-highlight · #a5e2e1</code></span></div>
+              <div class="swatch-item"><span class="swatch" style="background:var(--color-success)"></span><span>Success <code>--color-success · #55d6a1</code></span></div>
+            </div>
+          </article>
+          <article class="token-panel">
+            <h3>Typography</h3>
+            <div class="type-list">
+              <div class="type-sample"><span style="font:700 1.5rem var(--font-display)">Display</span><code>Roboto / bold</code></div>
+              <div class="type-sample"><span style="font:400 1rem var(--font-body)">Body copy</span><code>Prompt / regular</code></div>
+              <div class="type-sample"><span style="font:600 .875rem var(--font-body)">Label</span><code>Prompt / 600</code></div>
+              <div class="type-sample"><span style="font:400 .75rem var(--font-mono)">TOKEN_NAME</span><code>Consolas / mono</code></div>
+              <span class="token-value">--text-xs · --text-sm · --text-base · --text-lg · --text-xl · --text-2xl</span>
+            </div>
+          </article>
+          <article class="token-panel">
+            <h3>Spacing scale</h3>
+            <div class="spacing-list">
+              <div class="spacing-item"><span>space-1</span><span class="spacing-bar" style="width:var(--space-1)"></span><code>4px</code></div>
+              <div class="spacing-item"><span>space-2</span><span class="spacing-bar" style="width:var(--space-2)"></span><code>8px</code></div>
+              <div class="spacing-item"><span>space-3</span><span class="spacing-bar" style="width:var(--space-3)"></span><code>12px</code></div>
+              <div class="spacing-item"><span>space-4</span><span class="spacing-bar" style="width:var(--space-4)"></span><code>16px</code></div>
+              <div class="spacing-item"><span>space-6</span><span class="spacing-bar" style="width:var(--space-6)"></span><code>24px</code></div>
+              <div class="spacing-item"><span>space-8</span><span class="spacing-bar" style="width:var(--space-8)"></span><code>32px</code></div>
+              <span class="token-value">--space-1 through --space-12 · 4px base</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="component-section" id="buttons">
+        <div class="section-heading"><div><p class="eyebrow">Component 01</p><h2>Buttons</h2></div></div>
+        <p class="section-description">Action styles with clear hierarchy, keyboard focus, hover feedback, and a true disabled state.</p>
+        <div class="showcase-card">
+          <div class="showcase-toolbar"><span class="toolbar-title"><svg class="icon" aria-hidden="true"><use href="#icon-button"></use></svg>Button variants</span><span class="toolbar-label">Select a state</span></div>
+          <div class="showcase-canvas"><button class="preview-button preview-button--primary" id="button-preview" type="button">Discover models <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></button></div>
+          <div class="showcase-controls">
+            <span class="control-label">Variant</span>
+            <div class="segmented-control" role="group" aria-label="Button variant">
+              <button class="segment-button" type="button" data-button-variant="primary" aria-pressed="true">Primary</button>
+              <button class="segment-button" type="button" data-button-variant="secondary" aria-pressed="false">Secondary</button>
+              <button class="segment-button" type="button" data-button-variant="outline" aria-pressed="false">Outline</button>
+              <button class="segment-button" type="button" data-button-variant="disabled" aria-pressed="false">Disabled</button>
+            </div>
+          </div>
+          <div class="code-row"><code id="button-code">&lt;button class="button button--primary"&gt;Discover models&lt;/button&gt;</code><button class="copy-button" type="button" data-copy="button-code"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>Copy</button></div>
+        </div>
+      </section>
+
+      <section class="component-section" id="icons">
+        <div class="section-heading"><div><p class="eyebrow">Component 02</p><h2>Icons</h2></div></div>
+        <p class="section-description">Lightweight inline SVG icons for navigation, product details, actions, and status feedback. Select an icon to preview it.</p>
+        <div class="showcase-card">
+          <div class="showcase-toolbar"><span class="toolbar-title"><svg class="icon" aria-hidden="true"><use href="#icon-grid"></use></svg>Essential icon set</span><span class="toolbar-label">Inline SVG · no dependency</span></div>
+          <div class="showcase-canvas">
+            <div class="icon-demo-layout">
+              <div class="icon-grid" role="group" aria-label="Choose icon">
+                <button class="icon-choice" type="button" data-icon="car" aria-label="Car icon" aria-pressed="true"><svg class="icon"><use href="#icon-car"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="star" aria-label="Star icon" aria-pressed="false"><svg class="icon"><use href="#icon-star"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="zap" aria-label="Performance icon" aria-pressed="false"><svg class="icon"><use href="#icon-zap"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="search" aria-label="Search icon" aria-pressed="false"><svg class="icon"><use href="#icon-search"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="heart" aria-label="Favorite icon" aria-pressed="false"><svg class="icon"><use href="#icon-heart"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="info" aria-label="Information icon" aria-pressed="false"><svg class="icon"><use href="#icon-info"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="check" aria-label="Check icon" aria-pressed="false"><svg class="icon"><use href="#icon-check"></use></svg></button>
+                <button class="icon-choice" type="button" data-icon="warning" aria-label="Warning icon" aria-pressed="false"><svg class="icon"><use href="#icon-warning"></use></svg></button>
+              </div>
+              <div class="icon-preview" id="icon-preview" aria-label="Selected icon preview"><svg class="icon"><use href="#icon-car"></use></svg></div>
+            </div>
+          </div>
+          <div class="showcase-controls"><span class="control-label">Choose an icon above</span><span class="toolbar-label" id="icon-name">car · 24px</span></div>
+          <div class="code-row"><code id="icon-code">&lt;svg class="icon" aria-hidden="true"&gt;&lt;use href="#icon-car"&gt;&lt;/use&gt;&lt;/svg&gt;</code><button class="copy-button" type="button" data-copy="icon-code"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>Copy</button></div>
+        </div>
+      </section>
+
+      <section class="component-section" id="pictures">
+        <div class="section-heading"><div><p class="eyebrow">Component 03</p><h2>Pictures</h2></div></div>
+        <p class="section-description">Responsive image treatment with an optional gradient-backed caption overlay.</p>
+        <div class="showcase-card">
+          <div class="showcase-toolbar"><span class="toolbar-title"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg>Picture variants</span><span class="toolbar-label">Responsive · object-fit cover</span></div>
+          <div class="showcase-canvas">
+            <figure class="picture-preview" style="margin:0">
+              <div class="picture-frame">
+                <img id="picture-image" src="https://yohannonghee.github.io/Yohan/img/PCGB25_0177_fine-1920x960.jpg" alt="Porsche sports car on a scenic road">
+                <figcaption class="picture-caption" id="picture-caption">
+                  <p class="eyebrow">Pure performance</p>
+                  <h3>Turn every road into your race track.</h3>
+                  <p>Engineering excellence meets iconic design.</p>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="showcase-controls">
+            <span class="control-label">Display</span>
+            <div class="segmented-control" role="group" aria-label="Picture variant">
+              <button class="segment-button" type="button" data-picture-variant="plain" aria-pressed="false">Image only</button>
+              <button class="segment-button" type="button" data-picture-variant="caption" aria-pressed="true">With caption</button>
+            </div>
+            <span class="control-label">Image</span>
+            <div class="segmented-control" role="group" aria-label="Choose picture">
+              <button class="segment-button" type="button" data-picture="hero" aria-pressed="true">Hero</button>
+              <button class="segment-button" type="button" data-picture="gt3" aria-pressed="false">GT3 RS</button>
+              <button class="segment-button" type="button" data-picture="taycan" aria-pressed="false">Taycan</button>
+            </div>
+          </div>
+          <div class="code-row"><code id="picture-code">&lt;figure class="picture picture--caption"&gt;...&lt;/figure&gt;</code><button class="copy-button" type="button" data-copy="picture-code"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>Copy</button></div>
+        </div>
+      </section>
+
+      <section class="component-section" id="cards">
+        <div class="section-heading"><div><p class="eyebrow">Component 04</p><h2>Cards</h2></div></div>
+        <p class="section-description">Reusable content card for product highlights, with standard, featured, and compact treatments.</p>
+        <div class="showcase-card">
+          <div class="showcase-toolbar"><span class="toolbar-title"><svg class="icon" aria-hidden="true"><use href="#icon-card"></use></svg>Product card</span><span class="toolbar-label">Content + media + action</span></div>
+          <div class="showcase-canvas">
+            <article class="card-demo" id="card-preview" data-variant="standard">
+              <div class="card-media"><img src="https://yohannonghee.github.io/Yohan/img/Porsche%20911%20GT3%20RS.jpg" alt="Porsche 911 GT3 RS"></div>
+              <div class="card-content">
+                <p class="eyebrow">Track focused</p>
+                <h3>Porsche 911 GT3 RS</h3>
+                <p>Precision engineering and motorsport-inspired performance, built for the road and the circuit.</p>
+                <button class="preview-button preview-button--primary" type="button">Explore model <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+              </div>
+            </article>
+          </div>
+          <div class="showcase-controls">
+            <span class="control-label">Variant</span>
+            <div class="segmented-control" role="group" aria-label="Card variant">
+              <button class="segment-button" type="button" data-card-variant="standard" aria-pressed="true">Standard</button>
+              <button class="segment-button" type="button" data-card-variant="featured" aria-pressed="false">Featured</button>
+              <button class="segment-button" type="button" data-card-variant="compact" aria-pressed="false">Compact</button>
+            </div>
+          </div>
+          <div class="code-row"><code id="card-code">&lt;article class="card card--standard"&gt;...&lt;/article&gt;</code><button class="copy-button" type="button" data-copy="card-code"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>Copy</button></div>
+        </div>
+      </section>
+
+      <section class="component-section" id="alerts">
+        <div class="section-heading"><div><p class="eyebrow">Component 05</p><h2>Alerts & Badges</h2></div></div>
+        <p class="section-description">Status feedback with semantic color variants. Switch between informational, success, warning, and error states.</p>
+        <div class="showcase-card">
+          <div class="showcase-toolbar"><span class="toolbar-title"><svg class="icon" aria-hidden="true"><use href="#icon-bell"></use></svg>Status components</span><span class="toolbar-label">Accessible status feedback</span></div>
+          <div class="showcase-canvas showcase-canvas--top">
+            <div class="status-stack">
+              <div class="alert" id="alert-preview" role="status">
+                <svg class="icon" aria-hidden="true"><use href="#icon-info"></use></svg>
+                <div class="alert-content"><strong id="alert-title">Information</strong><p id="alert-message">Your configuration has been saved. You can continue exploring the component library.</p></div>
+              </div>
+              <div class="badge-row" aria-label="Status badge preview">
+                <span class="badge" id="badge-preview">In progress</span>
+                <span class="badge badge--success">Available</span>
+                <span class="badge badge--warning">Limited</span>
+                <span class="badge badge--error">Unavailable</span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-controls">
+            <span class="control-label">Alert variant</span>
+            <div class="segmented-control" role="group" aria-label="Alert variant">
+              <button class="segment-button" type="button" data-alert-variant="info" aria-pressed="true">Info</button>
+              <button class="segment-button" type="button" data-alert-variant="success" aria-pressed="false">Success</button>
+              <button class="segment-button" type="button" data-alert-variant="warning" aria-pressed="false">Warning</button>
+              <button class="segment-button" type="button" data-alert-variant="error" aria-pressed="false">Error</button>
+            </div>
+            <span class="control-label">Badge</span>
+            <div class="segmented-control" role="group" aria-label="Badge variant">
+              <button class="segment-button" type="button" data-badge-variant="info" aria-pressed="true">Info</button>
+              <button class="segment-button" type="button" data-badge-variant="success" aria-pressed="false">Success</button>
+              <button class="segment-button" type="button" data-badge-variant="warning" aria-pressed="false">Warning</button>
+              <button class="segment-button" type="button" data-badge-variant="error" aria-pressed="false">Error</button>
+            </div>
+          </div>
+          <div class="code-row"><code id="status-code">&lt;div class="alert alert--info" role="status"&gt;...&lt;/div&gt; &lt;span class="badge badge--info"&gt;In progress&lt;/span&gt;</code><button class="copy-button" type="button" data-copy="status-code"><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>Copy</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg><span id="toast-message">Copied to clipboard</span></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
